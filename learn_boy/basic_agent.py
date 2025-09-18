@@ -2,7 +2,7 @@ import os
 from langchain.agents import create_agent
 
 if not os.getenv("DEEPSEEK_API_KEY"):
-    os.environ["DEEPSEEK_API_KEY"] = "sk-b2f58bac87d24a7496d918e5d8485def"
+    os.environ["DEEPSEEK_API_KEY"] = "***"
 
 def get_weather(city: str) -> str:
     """Get weather for a given city."""
@@ -24,3 +24,4 @@ final_response = next(
     if msg.__class__.__name__ == "AIMessage"
 )
 print(final_response)
+
