@@ -3,7 +3,7 @@ import os
 from langchain_deepseek import ChatDeepSeek
 
 if not os.getenv("DEEPSEEK_API_KEY"):
-    os.environ["DEEPSEEK_API_KEY"] = "sk-b2f58bac87d24a7496d918e5d8485def"
+    os.environ["DEEPSEEK_API_KEY"] = "***"
 
 llm = ChatDeepSeek(
     model="deepseek-chat",
@@ -22,4 +22,5 @@ messages = [
     ("human", "I love programming."),
 ]
 ai_msg = llm.invoke(messages)
+
 print(ai_msg.content)
