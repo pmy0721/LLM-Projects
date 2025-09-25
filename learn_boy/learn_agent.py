@@ -91,8 +91,10 @@ agent = create_agent(model=model, tools=tools, prompt=system_prompt)
 # user_input = "请将Pytorch、TensorFlow、MindSpore三个AI框架按照目前国内外综合使用率和流行性排序，并给出参考依据"
 
 # 从context.txt文件中读取内容
-with open('context.txt', 'r', encoding='utf-8') as file:
-    user_input = file.read().strip()
+# with open('context.txt', 'r', encoding='utf-8') as file:
+#     user_input = file.read().strip()
+
+user_input = ''
 
 # 获取agent的完整响应
 result = None
@@ -105,4 +107,5 @@ for step in agent.stream(
 # 输出最终的AI消息
 if result:
     result["messages"][-1].pretty_print()
+
 
